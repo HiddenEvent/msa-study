@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/api-gateway" />
+    <file type="web" url="file://$PROJECT_DIR$/apigatway-service" />
     <file type="web" url="file://$PROJECT_DIR$/discoveryservice" />
     <file type="web" url="file://$PROJECT_DIR$/first-service" />
     <file type="web" url="file://$PROJECT_DIR$/second-service" />
     <file type="web" url="file://$PROJECT_DIR$/user-service" />
+    <file type="web" url="file://$PROJECT_DIR$/zuul-service" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
