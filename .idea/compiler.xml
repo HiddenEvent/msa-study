@@ -12,6 +12,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
+      <module name="api-gateway.main" target="1.8" />
+      <module name="api-gateway.test" target="1.8" />
+      <module name="discoveryservice" target="1.8" />
+      <module name="discoveryservice.main" target="1.8" />
+      <module name="discoveryservice.test" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="user-service.main" target="1.8" />
+      <module name="user-service.test" target="1.8" />
       <module name="zuul-service" target="1.8" />
       <module name="zuul-service.main" target="1.8" />
       <module name="zuul-service.test" target="1.8" />
