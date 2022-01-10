@@ -43,8 +43,6 @@ Vfirst-service/src/test/java/com/example/firstservice/FirstServiceApplicationTes
 Ysecond-service/src/test/java/com/example/secondservice/SecondServiceApplicationTests.java,a\f\af638609dd83061f8f9a40c74c02f83f84625b18
 C
 api-gateway/HELP.md,0\8\08c250fabcd5ba2d35eab0afb3fcd75826d85834
-„
-Tsecond-service/src/main/java/com/example/secondservice/SecondServiceApplication.java,2\a\2ab1eb50b8675a37c0bd2c7fdafebc6d794bd83c
 J
 first-service/build.gradle,8\4\84e4e96ecfd0efa4bae36a2da3c6c9a7657cd863
 j
