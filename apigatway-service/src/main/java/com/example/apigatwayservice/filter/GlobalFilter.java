@@ -9,10 +9,6 @@ import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
-/*
-*  FilterConfig로 합침 사용안함...
-*
-* */
 @Component
 @Slf4j
 public class GlobalFilter extends AbstractGatewayFilterFactory<GlobalFilter.Config> {
@@ -23,7 +19,6 @@ public class GlobalFilter extends AbstractGatewayFilterFactory<GlobalFilter.Conf
 
     @Override
     public GatewayFilter apply(Config config) {
-        // Custom Pre Filter
         return (exchange, chain) -> {
             ServerHttpRequest request = exchange.getRequest();
             ServerHttpResponse response = exchange.getResponse();
