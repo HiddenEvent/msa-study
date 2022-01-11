@@ -13,8 +13,6 @@ e
 \discoveryservice/src/main/java/com/example/discoveryservice/DiscoveryserviceApplication.java,1\b\1bacb69564fbbce9b85cd37a45859cd6168a735f
 M
 discoveryservice/build.gradle,6\2\6212e4e756ec86d179fe9344476b708fcaeb4f64
-K
-second-service/build.gradle,3\e\3ebfb721074f7066a41cb7b2a2bc63c9003eb202
 J
 second-service/gradlew.bat,b\2\b28284892d8dc6542e62d8d2018f04ce6a5ee1dc
 N
@@ -43,8 +41,6 @@ Vfirst-service/src/test/java/com/example/firstservice/FirstServiceApplicationTes
 Ysecond-service/src/test/java/com/example/secondservice/SecondServiceApplicationTests.java,a\f\af638609dd83061f8f9a40c74c02f83f84625b18
 C
 api-gateway/HELP.md,0\8\08c250fabcd5ba2d35eab0afb3fcd75826d85834
-J
-first-service/build.gradle,8\4\84e4e96ecfd0efa4bae36a2da3c6c9a7657cd863
 j
 :apigatway-service/gradle/wrapper/gradle-wrapper.properties,3\d\3d65ce95dbb9778fac669bb7ecb5bd68ad0ab3d1
 M
