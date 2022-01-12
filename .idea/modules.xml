@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/msa-study.iml" filepath="$PROJECT_DIR$/.idea/msa-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apigatway-service/apigatway-service.iml" filepath="$PROJECT_DIR$/apigatway-service/apigatway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apigatway-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apigatway-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apigatway-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/apigatway-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discoveryservice.iml" filepath="$PROJECT_DIR$/.idea/modules/discoveryservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discoveryservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/discoveryservice.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discoveryservice.test.iml" filepath="$PROJECT_DIR$/.idea/modules/discoveryservice.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/first-service/first-service.iml" filepath="$PROJECT_DIR$/first-service/first-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/first-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/first-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/first-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/first-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/second-service/second-service.iml" filepath="$PROJECT_DIR$/second-service/second-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/second-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/second-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/second-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/second-service.test.iml" />
     </modules>
   </component>
 </project>

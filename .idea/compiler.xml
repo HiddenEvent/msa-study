@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="2048" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Gradle Imported" enabled="true">
@@ -8,22 +9,22 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.22/9c08ea24c6eb714e2d6170e8122c069a0ba9aacf/lombok-1.18.22.jar" />
         </processorPath>
-        <module name="apigatway-service.main" />
+        <module name="first-service.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api-gateway" target="1.8" />
-      <module name="api-gateway.main" target="1.8" />
-      <module name="api-gateway.test" target="1.8" />
+      <module name="apigatway-service" target="1.8" />
+      <module name="apigatway-service.main" target="1.8" />
+      <module name="apigatway-service.test" target="1.8" />
       <module name="discoveryservice" target="1.8" />
       <module name="discoveryservice.main" target="1.8" />
       <module name="discoveryservice.test" target="1.8" />
-      <module name="user-service" target="1.8" />
-      <module name="user-service.main" target="1.8" />
-      <module name="user-service.test" target="1.8" />
-      <module name="zuul-service" target="1.8" />
-      <module name="zuul-service.main" target="1.8" />
-      <module name="zuul-service.test" target="1.8" />
+      <module name="first-service" target="1.8" />
+      <module name="first-service.main" target="1.8" />
+      <module name="first-service.test" target="1.8" />
+      <module name="second-service" target="1.8" />
+      <module name="second-service.main" target="1.8" />
+      <module name="second-service.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
