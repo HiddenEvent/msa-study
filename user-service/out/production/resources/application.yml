@@ -4,7 +4,7 @@ spring:
   application:
     name: user-service
 
-  # h2 설정
+  # h2 설정 ( JPA 꼭 있어야한다...)
   datasource:
     url: jdbc:h2:mem:testdb
   h2:
@@ -13,6 +13,10 @@ spring:
       settings:
         web-allow-others: true # 외부접속 허용
       path: /h2-console
+  # Jpa설정
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
 
 eureka:
   instance:

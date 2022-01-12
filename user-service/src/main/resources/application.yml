@@ -13,6 +13,10 @@ spring:
       settings:
         web-allow-others: true # 외부접속 허용
       path: /h2-console
+  # Jpa설정
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
 
 eureka:
   instance:
