@@ -4,6 +4,16 @@ spring:
   application:
     name: user-service
 
+  # h2 설정
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true # 외부접속 허용
+      path: /h2-console
+
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
