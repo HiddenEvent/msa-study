@@ -14,6 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/second-service/second-service.iml" filepath="$PROJECT_DIR$/second-service/second-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/second-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/second-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/second-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/second-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.test.iml" />
     </modules>
   </component>
 </project>
