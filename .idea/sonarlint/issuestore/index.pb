@@ -3,8 +3,6 @@ E
 first-service/HELP.md,0\3\0361217a0426f670ab1692d0ca04e47b0d465973
 F
 second-service/HELP.md,f\d\fd903fbe4457b80babb4f6bb077bdfd61530d39f
-e
-5user-service/out/production/resources/application.yml,0\b\0b145939742d977b3168a9fdfe13c70399de3d5e
 J
 second-service/gradlew.bat,b\2\b28284892d8dc6542e62d8d2018f04ce6a5ee1dc
 N
