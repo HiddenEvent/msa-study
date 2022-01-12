@@ -32,10 +32,7 @@ public class UserController {
     }
     @PostMapping("/users")
     public ResponseEntity createUser(@RequestBody UserDto.Req reqDto) {
-        ModelMapper mapper = new ModelMapper();
-        mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-        UserDto dto = mapper.map(reqDto, UserDto.class);
-        UserDto.Resp respDto = userService.createUser(dto);
+        UserDto.Resp respDto = userService.createUser(reqDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(respDto);
     }
 
