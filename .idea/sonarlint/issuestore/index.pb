@@ -43,12 +43,8 @@ L
 bapigatway-service/src/test/java/com/example/apigatwayservice/ApigatwayServiceApplicationTests.java,4\8\48b5909b7c98a5cb1a25287a572d5cc9ceafe711
 Ñ
 Tsecond-service/src/main/java/com/example/secondservice/SecondServiceApplication.java,2\a\2ab1eb50b8675a37c0bd2c7fdafebc6d794bd83c
-Ö
-Uapigatway-service/src/main/java/com/example/apigatwayservice/config/FilterConfig.java,d\0\d044c4870c9c4c09e1571a2ed7bcfdc4fa16699f
 é
 ^second-service/src/main/java/com/example/secondservice/controller/SecondServiceController.java,0\8\08f53c39cd3d1ace22a044a3304b18c2a33bd002
-Ö
-Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/CustomFilter.java,5\8\5848f65bfef9f23497a2126dc1e9db81a4d84975
 Ö
 Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/GlobalFilter.java,7\f\7f9ce8378f827e7c8c8a18595648571a9722a61e
 Ü
@@ -61,7 +57,3 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ã
 [first-service/src/main/java/com/example/firstservice/controller/FirstServiceController.java,b\7\b76b70e7a20f79aa7c1835c97ed90a11b54a8b4c
-N
-apigatway-service/build.gradle,a\b\abb1e4b5fba82b472230182f3d9a693ef37f08ad
-Å
-Quser-service/src/main/java/com/example/userservice/repository/UserRepository.java,4\0\401d80ecc2c5708569fbca14c5ecfa872467d6eb

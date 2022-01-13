@@ -1,8 +1,11 @@
 package com.example.userservice.repository;
 
 import com.example.userservice.domain.User;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends CrudRepository<User, Long> {
+import java.util.Optional;
 
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    User findByUserId(String userId);
 }

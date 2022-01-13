@@ -1,11 +1,13 @@
 package com.example.userservice.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class UserDto {
@@ -32,11 +34,13 @@ public class UserDto {
         private String pwd;
     }
     @Data
+//    @JsonInclude(JsonInclude.Include.NON_NULL)
     public static class Resp{
         private String email;
         private String name;
         private String userId;
 
+        private List<OrderDto.Resp> orders;
     }
 
 
