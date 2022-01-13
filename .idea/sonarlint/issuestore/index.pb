@@ -63,3 +63,5 @@ S
 [first-service/src/main/java/com/example/firstservice/controller/FirstServiceController.java,b\7\b76b70e7a20f79aa7c1835c97ed90a11b54a8b4c
 N
 apigatway-service/build.gradle,a\b\abb1e4b5fba82b472230182f3d9a693ef37f08ad
+Å
+Quser-service/src/main/java/com/example/userservice/repository/UserRepository.java,4\0\401d80ecc2c5708569fbca14c5ecfa872467d6eb
