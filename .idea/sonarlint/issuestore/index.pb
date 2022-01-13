@@ -57,5 +57,3 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ã
 [first-service/src/main/java/com/example/firstservice/controller/FirstServiceController.java,b\7\b76b70e7a20f79aa7c1835c97ed90a11b54a8b4c
-Å
-Quser-service/src/main/java/com/example/userservice/repository/UserRepository.java,4\0\401d80ecc2c5708569fbca14c5ecfa872467d6eb
