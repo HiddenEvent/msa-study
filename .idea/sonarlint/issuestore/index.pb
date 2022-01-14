@@ -37,8 +37,6 @@ I
 apigatway-service/gradlew,2\3\23d8ebaaca3299d0f04d5c071c43b8d00c742e04
 L
 apigatway-service/.gitignore,3\6\36f965c560659422b6652a6ec293ea685a2f15bc
-ç
-]apigatway-service/src/main/java/com/example/apigatwayservice/ApigatwayServiceApplication.java,6\1\61669f498d66a34f5a2542c632a68e412ce5e4b7
 í
 bapigatway-service/src/test/java/com/example/apigatwayservice/ApigatwayServiceApplicationTests.java,4\8\48b5909b7c98a5cb1a25287a572d5cc9ceafe711
 Ñ
