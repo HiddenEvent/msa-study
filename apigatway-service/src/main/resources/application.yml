@@ -7,6 +7,8 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.instance_id:${random.value}}
 
 spring:
   application:
@@ -20,10 +22,38 @@ spring:
             preLogger: true
             postLogger: true
       routes:
+#        - id: user-service
+#          uri: lb://USER-SERVICE
+#          predicates:
+#            - Path=/user-service/**
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/login
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie #Post로 요청되는 값을 항상 새로운 값으로 인식하기 위해 RequestHeader 초기화 설정
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment} # /***-service를 삭제 후 다시 요청
+
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/users
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie #Post로 요청되는 값을 항상 새로운 값으로 인식하기 위해 RequestHeader 초기화 설정
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment} # /***-service를 삭제 후 다시 요청
+
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/user-service/**
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie #Post로 요청되는 값을 항상 새로운 값으로 인식하기 위해 RequestHeader 초기화 설정
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment} # /***-service를 삭제 후 다시 요청
+
+
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:

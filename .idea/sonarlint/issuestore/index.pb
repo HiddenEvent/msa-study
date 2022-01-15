@@ -43,8 +43,6 @@ bapigatway-service/src/test/java/com/example/apigatwayservice/ApigatwayServiceAp
 Tsecond-service/src/main/java/com/example/secondservice/SecondServiceApplication.java,2\a\2ab1eb50b8675a37c0bd2c7fdafebc6d794bd83c
 Ž
 ^second-service/src/main/java/com/example/secondservice/controller/SecondServiceController.java,0\8\08f53c39cd3d1ace22a044a3304b18c2a33bd002
-…
-Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/GlobalFilter.java,7\f\7f9ce8378f827e7c8c8a18595648571a9722a61e
 †
 Vapigatway-service/src/main/java/com/example/apigatwayservice/filter/LoggingFilter.java,4\e\4e8619a73cbe78937a1051a6b436333271941747
 K

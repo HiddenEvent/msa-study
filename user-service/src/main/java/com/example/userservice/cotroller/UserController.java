@@ -5,20 +5,17 @@ import com.example.userservice.service.UserService;
 import com.example.userservice.vo.Greeting;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
 import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/user-service")
+@RequestMapping("/")
 public class UserController {
     private final Environment env;
     private final Greeting greeting;
