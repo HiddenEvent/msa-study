@@ -26,6 +26,7 @@ spring:
 #          uri: lb://USER-SERVICE
 #          predicates:
 #            - Path=/user-service/**
+        # 로그인
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
@@ -34,7 +35,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie #Post로 요청되는 값을 항상 새로운 값으로 인식하기 위해 RequestHeader 초기화 설정
             - RewritePath=/user-service/(?<segment>.*), /$\{segment} # /***-service를 삭제 후 다시 요청
-
+        # 회원가입
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
@@ -43,7 +44,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie #Post로 요청되는 값을 항상 새로운 값으로 인식하기 위해 RequestHeader 초기화 설정
             - RewritePath=/user-service/(?<segment>.*), /$\{segment} # /***-service를 삭제 후 다시 요청
-
+        # 인증이 필요한 호출
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
@@ -52,6 +53,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie #Post로 요청되는 값을 항상 새로운 값으로 인식하기 위해 RequestHeader 초기화 설정
             - RewritePath=/user-service/(?<segment>.*), /$\{segment} # /***-service를 삭제 후 다시 요청
+            - AuthorizationHeaderFilter
 
 
         - id: catalog-service
@@ -81,3 +83,5 @@ spring:
                 baseMessage: Hi. there.
                 preLogger: true
                 postLogger: true
+token:
+  secret: user_token
