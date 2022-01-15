@@ -9,4 +9,6 @@ public interface UserService extends UserDetailsService {
     UserDto.Resp createUser(UserDto.Req reqDto);
     UserDto.Resp getUserByUserId(String userId);
     List<UserDto.Resp> getUserByAll();
+
+    UserDto getUserDetailsByEmail(String email);
 }

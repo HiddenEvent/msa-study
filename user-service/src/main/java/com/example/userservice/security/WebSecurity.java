@@ -9,9 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import java.net.InetAddress;
-
+/* 로그인 순서 -1 */
 @RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity
@@ -35,8 +33,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     }
     /* 커스텀하게 관리하는 로직*/
     private AuthenticationFilter getAuthenticationFilter() throws Exception {
-        AuthenticationFilter authenticationFilter = new AuthenticationFilter();
-        authenticationFilter.setAuthenticationManager(authenticationManager());
+        AuthenticationFilter authenticationFilter = new AuthenticationFilter(authenticationManager(), userService, env);
         return authenticationFilter;
     }
     /* 인증에 관련된 로직*/
