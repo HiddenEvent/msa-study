@@ -63,8 +63,6 @@ s
 Cuser-service/src/main/java/com/example/userservice/dto/UserDto.java,3\2\32b8ea250f8175ec06da1dac36551d8a9f54de65
 s
 Cuser-service/src/main/java/com/example/userservice/domain/User.java,3\2\3218063b0f4f34607c11c495b67a3be16d29a3e3
-|
-Luser-service/src/main/java/com/example/userservice/security/WebSecurity.java,d\2\d21324417f11bf65837349dc99f451a80b1b09e0
 {
 Kuser-service/src/main/java/com/example/userservice/service/UserService.java,c\f\cfd079d80df7d987ddedf0d4232f091674b16b88
 

@@ -23,6 +23,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
 //        http.authorizeRequests().antMatchers("/users/**").permitAll();
+        /* actuator Config 정보를 가져오기위한 권한 처리*/
+        http.authorizeRequests().antMatchers("/actuator/**").permitAll();
+        /* 모든 권한 로직*/
         http.authorizeRequests()
                 .antMatchers("/**")
 //                .hasIpAddress("192.168.31.1")
