@@ -59,8 +59,6 @@ S
 Nuser-service/src/main/java/com/example/userservice/UserServiceApplication.java,6\0\608f450ab50b00315e06e1f2a5c9fa12b1f68967
 w
 Guser-service/src/main/java/com/example/userservice/vo/RequestLogin.java,8\0\8004ac25950971f9b8ab52d1a047beb498710a4c
-€
-Puser-service/src/main/java/com/example/userservice/cotroller/UserController.java,5\3\53b6dba83af685a2f0f4b405b13fdc2f71968b1c
 s
 Cuser-service/src/main/java/com/example/userservice/dto/UserDto.java,3\2\32b8ea250f8175ec06da1dac36551d8a9f54de65
 s
@@ -79,8 +77,6 @@ Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/CustomFilte
 bapigatway-service/src/main/java/com/example/apigatwayservice/filter/AuthorizationHeaderFilter.java,f\b\fb5a60e0542112b97fcd1c6968a477beaa8be445
 N
 apigatway-service/build.gradle,a\b\abb1e4b5fba82b472230182f3d9a693ef37f08ad
-I
-user-service/build.gradle,d\3\d3b0e4f7e9d67589388225a49753086bfeb45368
 …
 Uuser-service/src/main/java/com/example/userservice/security/AuthenticationFilter.java,2\9\296f9919bd3d6f24f1fa114dd6fab029cdba7f4e
 …
