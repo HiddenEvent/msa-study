@@ -71,12 +71,6 @@ Ouser-service/src/main/java/com/example/userservice/service/UserServiceImpl.java
 Quser-service/src/main/java/com/example/userservice/repository/UserRepository.java,4\0\401d80ecc2c5708569fbca14c5ecfa872467d6eb
 …
 Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/CustomFilter.java,5\8\5848f65bfef9f23497a2126dc1e9db81a4d84975
-’
-bapigatway-service/src/main/java/com/example/apigatwayservice/filter/AuthorizationHeaderFilter.java,f\b\fb5a60e0542112b97fcd1c6968a477beaa8be445
-N
-apigatway-service/build.gradle,a\b\abb1e4b5fba82b472230182f3d9a693ef37f08ad
-…
-Uuser-service/src/main/java/com/example/userservice/security/AuthenticationFilter.java,2\9\296f9919bd3d6f24f1fa114dd6fab029cdba7f4e
 …
 Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/GlobalFilter.java,7\f\7f9ce8378f827e7c8c8a18595648571a9722a61e
 J
