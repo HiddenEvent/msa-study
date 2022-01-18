@@ -8,3 +8,6 @@ spring:
       server:
         git:
           uri: https://github.com/HiddenEvent/msa-settings
+#          private 래파지토리 경우
+#          username:
+#          password:

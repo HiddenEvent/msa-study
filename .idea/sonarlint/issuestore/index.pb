@@ -87,3 +87,7 @@ F
 config-service/gradlew,f\b\fbb238b0639f0adf202aea71c3bc10d366a15d52
 â
 Yconfig-service/src/test/java/com/example/configservice/ConfigServiceApplicationTests.java,c\e\cedae10d187a23fd8c5e5afb449401b6f742c9f8
+ç
+]apigatway-service/src/main/java/com/example/apigatwayservice/ApigatwayServiceApplication.java,6\1\61669f498d66a34f5a2542c632a68e412ce5e4b7
+N
+apigatway-service/build.gradle,a\b\abb1e4b5fba82b472230182f3d9a693ef37f08ad
