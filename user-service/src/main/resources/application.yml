@@ -29,3 +29,19 @@ eureka:
 
 greeting:
   message: Welcom to the E-commerce.
+
+logging:
+  level:
+    com.example.userservice: DEBUG
+
+# Acturator 기능처리를 위한 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans # refresh: Config 정보를 refresh
+
+#token:
+#    expiration_time: 86400000
+#    secret: user_token
+

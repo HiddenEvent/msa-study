@@ -5,20 +5,17 @@ import com.example.userservice.service.UserService;
 import com.example.userservice.vo.Greeting;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
 import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/user-service")
+@RequestMapping("/")
 public class UserController {
     private final Environment env;
     private final Greeting greeting;
@@ -26,7 +23,12 @@ public class UserController {
 
     @GetMapping("/health-check")
     public String status() {
-        return String.format("health, Cheak Ok? UserService PORT : %s", env.getProperty("local.server.port"));
+        return String.format("health, Cheak Ok? UserService "
+                + ", port(local.server.port) = " + env.getProperty("local.server.port")
+                + ", port(server.server.port) = " + env.getProperty("server.port")
+                + ", token secret = " + env.getProperty("token.secret")
+                + ", token expiration = " + env.getProperty("token.expiration_time")
+        );
     }
 
     @GetMapping("/welcome")

@@ -6,14 +6,13 @@ import com.example.userservice.dto.UserDto;
 import com.example.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -57,5 +56,32 @@ public class UserServiceImpl implements UserService{
             respDtos.add(mapper.map(user, UserDto.Resp.class));
         }
         return respDtos;
+    }
+
+    /* 로그인 순서 -3 */
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findByEmail(username);
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+        /* 스프링 시큐리티 User 객체리턴을 해줘야함*/
+        return new org.springframework.security.core.userdetails.User(
+                user.getEmail()
+                ,user.getEncryptedPwd()
+                ,true ,true ,true ,true
+                , new ArrayList<>()
+        );
+    }
+
+    @Override
+    public UserDto getUserDetailsByEmail(String email) {
+        User user = userRepository.findByEmail(email);
+        if (user == null) {
+            throw new UsernameNotFoundException(email);
+        }
+
+        UserDto userDto = mapper.map(user, UserDto.class);
+        return userDto;
     }
 }
