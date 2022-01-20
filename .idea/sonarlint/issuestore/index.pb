@@ -75,8 +75,6 @@ Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/CustomFilte
 Uapigatway-service/src/main/java/com/example/apigatwayservice/filter/GlobalFilter.java,7\f\7f9ce8378f827e7c8c8a18595648571a9722a61e
 J
 config-service/gradlew.bat,b\f\bfff4105f64ad589a72a34a5f739b24626fe4b28
-K
-config-service/build.gradle,8\9\897bbd6396225a219326c38f922b61d623bbf902
 g
 7config-service/gradle/wrapper/gradle-wrapper.properties,d\3\d39c03e7c53ab68b21d54f767f651c4f7af5d272
 I
@@ -89,5 +87,3 @@ F
 Yconfig-service/src/test/java/com/example/configservice/ConfigServiceApplicationTests.java,c\e\cedae10d187a23fd8c5e5afb449401b6f742c9f8
 ç
 ]apigatway-service/src/main/java/com/example/apigatwayservice/ApigatwayServiceApplication.java,6\1\61669f498d66a34f5a2542c632a68e412ce5e4b7
-N
-apigatway-service/build.gradle,a\b\abb1e4b5fba82b472230182f3d9a693ef37f08ad

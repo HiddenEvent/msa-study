@@ -31,6 +31,9 @@ dependencies {
     /*Acturator refresh 사용하여 재기동없이 정보 가져오기 위한 의존성 추가*/
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
+    /* Spring-Bus(RabbitMq를 사용)를 사용하기 위한 의존 추가*/
+    implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+
     // jwt
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
     compileOnly 'org.projectlombok:lombok'
