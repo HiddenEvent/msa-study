@@ -11,8 +11,8 @@ spring:
     password: guest
 
   # h2 설정 ( JPA 꼭 있어야한다...)
-  datasource:
-    url: jdbc:h2:mem:testdb
+#  datasource:
+#    url: jdbc:h2:mem:testdb    # config yml로 옮긴다.
   h2:
     console:
       enabled: true

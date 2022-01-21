@@ -3,10 +3,16 @@ server:
 spring:
   application:
     name: user-service
+  # RebbitMq 설정 추가
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 
   # h2 설정 ( JPA 꼭 있어야한다...)
-  datasource:
-    url: jdbc:h2:mem:testdb
+#  datasource:
+#    url: jdbc:h2:mem:testdb    # config yml로 옮긴다.
   h2:
     console:
       enabled: true
@@ -39,7 +45,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans # refresh: Config 정보를 refresh
+        include: refresh, health, beans, busrefresh # refresh: Config 정보를 refresh
 
 #token:
 #    expiration_time: 86400000

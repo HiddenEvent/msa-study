@@ -1,0 +1,8 @@
+# 외부 파일에 DB정보가 저장되어 있음 (user-service.yml)
+# 외부 config-yml 파일 확인 방법 : http://127.0.0.1:8888/config-service/default  설정정보 확인
+# 외부 user-yml 파일 확인 방법 : http://127.0.0.1:8888/user-service/default  설정정보 확인
+
+# POST http://127.0.0.1:8888/encrypt : plainText -> 암호값을 가져온다
+# POST http://127.0.0.1:8888/decrypt : 암호값 -> plainText 값을 가져온다
+encrypt:
+  key: akvcfnmskanvowie12315
