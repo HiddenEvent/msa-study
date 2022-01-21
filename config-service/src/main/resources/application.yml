@@ -3,6 +3,14 @@ server:
 spring:
   application:
     name: config-service
+
+  # RebbitMq 설정 추가
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
   profiles:
     active: native
 
@@ -19,3 +27,8 @@ spring:
 #          private 래파지토리 경우
 #          username:
 #          password:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
