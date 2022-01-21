@@ -5,4 +5,8 @@
 # POST http://127.0.0.1:8888/encrypt : plainText -> 암호값을 가져온다
 # POST http://127.0.0.1:8888/decrypt : 암호값 -> plainText 값을 가져온다
 encrypt:
-  key: akvcfnmskanvowie12315
+  #  key: akvcfnmskanvowie12315   # key 스토어 파일로 적용 예정
+  key-store:
+    location: file:///${user.home}/IdeaProjects/keystore/apiEncryptionKey.jks # 비공개키 적용
+    password: test1234 # 키 비밀번호 입력
+    alias: apiEncryptionKey
