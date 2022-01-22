@@ -6,10 +6,15 @@ import com.example.userservice.dto.UserDto;
 import com.example.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.env.Environment;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +22,13 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
     private final ModelMapper mapper;
+
+    private final Environment env;
+    private final RestTemplate restTemplate;
 
     @Override
     public UserDto.Resp createUser(UserDto.Req reqDto) {
@@ -42,7 +50,13 @@ public class UserServiceImpl implements UserService{
         if (user == null) return null;
 
         UserDto.Resp respDto = mapper.map(user, UserDto.Resp.class);
-        ArrayList<OrderDto.Resp> respOrderDtos = new ArrayList<>();
+//        String orderUrl = "http://127.0.0.1:8000/order-service/%s/orders";
+        String orderUrl = String.format(env.getProperty("order_service.url"), userId);
+        ResponseEntity<List<OrderDto.Resp>> orderResp =
+                restTemplate.exchange(orderUrl, HttpMethod.GET, null
+                        , new ParameterizedTypeReference<List<OrderDto.Resp>>() {
+                        });
+        List<OrderDto.Resp> respOrderDtos = orderResp.getBody();
         respDto.setOrders(respOrderDtos);
 
         return respDto;
@@ -68,8 +82,8 @@ public class UserServiceImpl implements UserService{
         /* 스프링 시큐리티 User 객체리턴을 해줘야함*/
         return new org.springframework.security.core.userdetails.User(
                 user.getEmail()
-                ,user.getEncryptedPwd()
-                ,true ,true ,true ,true
+                , user.getEncryptedPwd()
+                , true, true, true, true
                 , new ArrayList<>()
         );
     }
