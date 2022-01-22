@@ -61,12 +61,14 @@ public class UserServiceImpl implements UserService {
         respDto.setOrders(respOrderDtos);
         */
         /* FeignClient 사용하여 마이크로 서비스 호출 */
-        List<OrderDto.Resp> orders = null;
-        try {
-            orders = orderServiceClient.getOrders(userId);
-        } catch (FeignException e) {
-            log.error(e.getMessage());
-        }
+//        List<OrderDto.Resp> orders = null;
+//        try {
+//            orders = orderServiceClient.getOrders(userId);
+//        } catch (FeignException e) {
+//            log.error(e.getMessage());
+//        }
+        /* ErrorDecoder */
+        List<OrderDto.Resp> orders = orderServiceClient.getOrders(userId);
         respDto.setOrders(orders);
 
         return respDto;
