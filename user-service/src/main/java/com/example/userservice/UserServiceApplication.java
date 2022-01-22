@@ -1,5 +1,6 @@
 package com.example.userservice;
 
+import feign.Logger;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.boot.SpringApplication;
@@ -35,5 +36,9 @@ public class UserServiceApplication {
     @LoadBalanced // 마이크로 서비스 이름을 가지고 호출하기 위한 설정 (Eureka 대시보드 이름으로 명시)
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
+    }
+    @Bean
+    public Logger.Level feignLoggerLevel(){
+        return Logger.Level.FULL;
     }
 }
