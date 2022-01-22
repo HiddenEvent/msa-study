@@ -1,15 +1,13 @@
 package com.example.userservice.service;
 
+import com.example.userservice.client.OrderServiceClient;
 import com.example.userservice.domain.User;
 import com.example.userservice.dto.OrderDto;
 import com.example.userservice.dto.UserDto;
 import com.example.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -29,6 +27,7 @@ public class UserServiceImpl implements UserService {
 
     private final Environment env;
     private final RestTemplate restTemplate;
+    private final OrderServiceClient orderServiceClient;
 
     @Override
     public UserDto.Resp createUser(UserDto.Req reqDto) {
@@ -50,7 +49,7 @@ public class UserServiceImpl implements UserService {
         if (user == null) return null;
 
         UserDto.Resp respDto = mapper.map(user, UserDto.Resp.class);
-//        String orderUrl = "http://127.0.0.1:8000/order-service/%s/orders";
+        /*  //RestTemplate 사용했던 내용
         String orderUrl = String.format(env.getProperty("order_service.url"), userId);
         ResponseEntity<List<OrderDto.Resp>> orderResp =
                 restTemplate.exchange(orderUrl, HttpMethod.GET, null
@@ -58,6 +57,10 @@ public class UserServiceImpl implements UserService {
                         });
         List<OrderDto.Resp> respOrderDtos = orderResp.getBody();
         respDto.setOrders(respOrderDtos);
+        */
+        /* FeignClient 사용하여 마이크로 서비스 호출 */
+        List<OrderDto.Resp> orders = orderServiceClient.getOrders(userId);
+        respDto.setOrders(orders);
 
         return respDto;
     }
