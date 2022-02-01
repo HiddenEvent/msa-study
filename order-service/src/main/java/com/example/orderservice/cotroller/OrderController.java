@@ -1,5 +1,6 @@
 package com.example.orderservice.cotroller;
 
+import com.example.orderservice.config.KafkaProducer;
 import com.example.orderservice.dto.OrderDto;
 import com.example.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ import java.util.List;
 public class OrderController {
     private final Environment env;
     private final OrderService orderService;
+    private final KafkaProducer kafkaProducer;
 
     @GetMapping("/health-check")
     public String status() {
@@ -28,6 +30,8 @@ public class OrderController {
     public ResponseEntity createOrder(@PathVariable String userId, @RequestBody OrderDto.Req reqDto) {
         reqDto.setUserId(userId);
         OrderDto.Resp respDto = orderService.createOrder(reqDto);
+        /* Kafka로 메세지 요청 데이터 보내기 */
+        kafkaProducer.send("example-catalog-topic", reqDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(respDto);
     }
 
