@@ -45,9 +45,9 @@ public class Order implements Serializable {
                 .productId(reqDto.getProductId())
                 .qty(reqDto.getQty())
                 .unitPrice(reqDto.getUnitPrice())
-                .totalPrice(reqDto.getUnitPrice() * reqDto.getQty())
+                .totalPrice(reqDto.getTotalPrice())
                 .userId(reqDto.getUserId())
-                .orderId(UUID.randomUUID().toString())
+                .orderId(reqDto.getOrderId())
                 .build();
     }
 //

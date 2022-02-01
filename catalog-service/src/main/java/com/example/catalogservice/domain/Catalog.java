@@ -32,6 +32,10 @@ public class Catalog implements Serializable {
     @ColumnDefault(value = "CURRENT_TIMESTAMP")
     private Date createAt;
 
+    public void sellStock(Integer qty) {
+        this.stock -= qty;
+    }
+
 //    public static Catalog createUser(UserDto reqDto) {
 //        return Catalog.builder()
 //                .email(reqDto.getEmail())
