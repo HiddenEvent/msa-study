@@ -1,4 +1,4 @@
-package com.example.catalogservice.config;
+package com.example.catalogservice.messagequeue;
 
 import com.example.catalogservice.domain.Catalog;
 import com.example.catalogservice.repository.CatalogRepository;

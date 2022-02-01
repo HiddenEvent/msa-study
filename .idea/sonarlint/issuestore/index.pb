@@ -89,11 +89,5 @@ Luser-service/src/main/java/com/example/userservice/security/WebSecurity.java,d
 Uuser-service/src/main/java/com/example/userservice/security/AuthenticationFilter.java,2\9\296f9919bd3d6f24f1fa114dd6fab029cdba7f4e
 I
 user-service/build.gradle,d\3\d3b0e4f7e9d67589388225a49753086bfeb45368
-v
-Forder-service/src/main/java/com/example/orderservice/domain/Order.java,8\c\8c7334a7420dac367969e92d4764504ef8c3009d
-v
-Forder-service/src/main/java/com/example/orderservice/dto/OrderDto.java,c\c\cc783d18f0f55ab99276dd240a4f8b8d9ff27ded
 ‰
 Ycatalog-service/src/main/java/com/example/catalogservice/cotroller/CatalogController.java,4\9\49547b5e3304bc6d14f153aef66193f138ab441a
-~
-Norder-service/src/main/java/com/example/orderservice/service/OrderService.java,a\6\a6d699454af0763d020f15d56b743a415f8e726a
