@@ -48,9 +48,16 @@ public class OrderController {
     }
 
     @GetMapping("/{userId}/orders")
-    public ResponseEntity<List<OrderDto.Resp>> getOrdersByUserId(@PathVariable String userId) {
+    public ResponseEntity<List<OrderDto.Resp>> getOrdersByUserId(@PathVariable String userId) throws Exception {
         log.info("Before retrieve Order data");
         List<OrderDto.Resp> respDtos = orderService.getOrdersByUserId(userId);
+        try {
+            Thread.sleep(1000);
+            throw new Exception("장애 발생");
+        } catch (InterruptedException ex){
+            log.error(ex.getMessage());
+        }
+
         log.info("After retrieve Order data");
         return ResponseEntity.status(HttpStatus.OK).body(respDtos);
     }
