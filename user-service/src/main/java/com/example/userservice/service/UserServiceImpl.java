@@ -9,6 +9,8 @@ import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.core.env.Environment;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -19,6 +21,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
 @Slf4j
 @RequiredArgsConstructor
 @Service
@@ -30,6 +33,8 @@ public class UserServiceImpl implements UserService {
     private final Environment env;
     private final RestTemplate restTemplate;
     private final OrderServiceClient orderServiceClient;
+
+    private final CircuitBreakerFactory circuitBreakerFactory;
 
     @Override
     public UserDto.Resp createUser(UserDto.Req reqDto) {
@@ -68,7 +73,9 @@ public class UserServiceImpl implements UserService {
 //            log.error(e.getMessage());
 //        }
         /* ErrorDecoder */
-        List<OrderDto.Resp> orders = orderServiceClient.getOrders(userId);
+//        List<OrderDto.Resp> orders = orderServiceClient.getOrders(userId);
+        CircuitBreaker circuitBreaker = circuitBreakerFactory.create("circuitBreaker");
+        List<OrderDto.Resp> orders = circuitBreaker.run(() -> orderServiceClient.getOrders(userId), throwable -> new ArrayList<>());
         respDto.setOrders(orders);
 
         return respDto;
