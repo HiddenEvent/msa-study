@@ -31,6 +31,7 @@ public class OrderController {
 
     @PostMapping("/{userId}/orders")
     public ResponseEntity createOrder(@PathVariable String userId, @RequestBody OrderDto.Req reqDto) {
+        log.info("Before added Order data");
         reqDto.setUserId(userId);
         reqDto.setOrderId(UUID.randomUUID().toString());
         reqDto.setTotalPrice(reqDto.getUnitPrice() * reqDto.getQty());
@@ -41,13 +42,16 @@ public class OrderController {
 //        kafkaProducer.send("example-catalog-topic", reqDto);
         /* Kafka connect로 메세지 처리*/
 //        orderProducer.send("orders", reqDto);
+        log.info("After added Order data");
 
         return ResponseEntity.status(HttpStatus.CREATED).body(respDto);
     }
 
     @GetMapping("/{userId}/orders")
     public ResponseEntity<List<OrderDto.Resp>> getOrdersByUserId(@PathVariable String userId) {
+        log.info("Before retrieve Order data");
         List<OrderDto.Resp> respDtos = orderService.getOrdersByUserId(userId);
+        log.info("After retrieve Order data");
         return ResponseEntity.status(HttpStatus.OK).body(respDtos);
     }
 
