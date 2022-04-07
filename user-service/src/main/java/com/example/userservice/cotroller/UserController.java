@@ -39,7 +39,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity createUser(@RequestBody UserDto.Req reqDto) {
+    public ResponseEntity<UserDto.Resp> createUser(@RequestBody UserDto.Req reqDto) {
         UserDto.Resp respDto = userService.createUser(reqDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(respDto);
     }
